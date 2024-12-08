@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Interactive Data Table | Responsive, Feature-Rich Table with Tailwind CSS
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Build a responsive and interactive data table with sorting, filtering, pagination, and project addition features using HTML, Tailwind CSS, and JavaScript. Ideal for tabular data management."
+    />
+    <meta name="author" content="Zakaria Dakir" />
+    <meta
+      name="keywords"
+      content="data table, interactive table, responsive design, Tailwind CSS, JavaScript, table sorting, table filtering, table pagination, HTML project, tabular data management"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="preload" href="./styles/output.css" as="style" />
+    <link rel="stylesheet" href="./styles/output.css" />
+    <script type="module" src="./scripts/scripts.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="font-inter bg-gray-100 p-0 min-[537px]:p-4">
+    <div
+      class="bg-white min-w-full min-h-full rounded-none min-[537px]:rounded-xl py-4 px-5"
+    >
+      <header>
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-2xl text-gray-900 flex items-center gap-2">
+            Projects<span
+              id="projects-count"
+              class="font-medium text-xs text-indigo-500 bg-indigo-50 px-2.5 py-0.5 rounded-xl"
+            ></span>
+          </h1>
+          <div class="flex items-center gap-5">
+            <button
+              type="button"
+              class="ph-bold ph-bell text-xl text-gray-400 transition ease-in-out duration-300 hover:text-gray-900"
+              aria-label="Notifications"
+            ></button>
+            <button
+              type="button"
+              class="ph-bold ph-question text-xl text-gray-400 transition ease-in-out duration-300 hover:text-gray-900"
+              aria-label="Help"
+            ></button>
+            <button type="button" class="w-8 h-8 rounded-full">
+              <img
+                src="./images/pfp.png"
+                alt="User's Profile Picture"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
