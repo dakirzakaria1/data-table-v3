@@ -90,6 +90,42 @@
             <tbody id="projects-wrapper"></tbody>
           </table>
         </div>
+        <div class="flex pt-3 px-2.5 gap-4 justify-between items-center">
+          <p id="page-info" class="font-medium text-xs text-gray-500" aria-live="polite"></p>
+          <div class="flex items-center gap-4">
+            <div class="font-medium text-xs text-gray-500">
+              <label for="rows-per-page-select" class="cursor-pointer"
+                >Rows per page:
+              </label>
+              <select
+                class="cursor-pointer text-center"
+                name="rows-per-page"
+                id="rows-per-page-select"
+              >
+                <option tes value="5"">5</option>
+                <option tes value="10">10</option>
+                <option tes value="15">15</option>
+                <option tes value="20">20</option>
+                <option tes value="30">30</option>
+                <option tes value="40">40</option>
+                <option tes value="50">50</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                id="previous-page"
+                class="ph-bold ph-caret-left button secondary-button"
+                aria-label="Previous Page"
+              ></button>
+              <span id="current-page" class="font-medium text-xs text-gray-500"></span>
+              <button
+                id="next-page"
+                class="ph-bold ph-caret-right button secondary-button"
+                aria-label="Next Page"
+              ></button>
+            </div>            
+          </div>
+        </div>        
       </main>
     </div>
   </body>

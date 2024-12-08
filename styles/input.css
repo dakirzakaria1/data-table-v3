@@ -12,7 +12,7 @@
   @apply text-white bg-indigo-500 shadow-custom hover:bg-indigo-600 hover:shadow-custom2 active:shadow-custom3;
 }
 .secondary-button {
-  @apply text-gray-700 bg-white shadow-custom4 hover:text-gray-900 hover:shadow-custom5 active:shadow-custom6;
+  @apply text-gray-700 bg-white shadow-custom4 hover:text-gray-900 hover:shadow-custom5 active:shadow-custom6 disabled:active:shadow-custom4 disabled:hover:shadow-custom4 disabled:hover:text-gray-400 disabled:text-gray-400 disabled:bg-[#F7F9FC] ;
 }
 .modal-overlay {
   @apply fixed top-0 left-0 w-full h-full z-40;
@@ -56,6 +56,4 @@
 .data-table-container::-webkit-scrollbar {
   display: none;
 }
-.data-table-body .project-row:has(input[type="checkbox"]:checked) {
-  @apply bg-[#EDEDFC];
-}
+
