@@ -854,6 +854,20 @@ video {
   color: rgb(104 113 130 / var(--tw-text-opacity));
 }
 
+.text-\[\#ea2424e9\] {
+  color: #ea2424e9;
+}
+
+.text-\[\#43ff19\] {
+  --tw-text-opacity: 1;
+  color: rgb(67 255 25 / var(--tw-text-opacity));
+}
+
+.text-\[\#826868\] {
+  --tw-text-opacity: 1;
+  color: rgb(130 104 104 / var(--tw-text-opacity));
+}
+
 .opacity-10 {
   opacity: 0.1;
 }

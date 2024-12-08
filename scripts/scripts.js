@@ -20,7 +20,8 @@ let currentSearchTerm = "";
 let selectedFilter = "All";
 let currentPage = 1;
 let rowsPerPage = JSON.parse(localStorage.getItem("rowsPerPage")) || 10;
-rowsPerPageSelect.value = rowsPerPage === projectsArray.length ? "all" : rowsPerPage;
+rowsPerPageSelect.value =
+  rowsPerPage === projectsArray.length ? "all" : rowsPerPage;
 
 /* Functions */
 const updateProjectsCount = () => {
@@ -82,7 +83,7 @@ const searchProjects = (searchTerm) => {
 };
 
 const renderProjects = (
-  filteredProjects ,
+  filteredProjects,
   currentPage = 1,
   rowsPerPage = 10
 ) => {
@@ -115,7 +116,11 @@ const updatePageInfo = (currentPage, rowsPerPage, totalProjects) => {
   const endProject = Math.min(currentPage * rowsPerPage, totalProjects);
   pageInfoElement.textContent = `${startProject}-${endProject} of ${totalProjects}`;
   const totalPages = Math.ceil(totalProjects / rowsPerPage);
-  currentPageElement.innerHTML = `<span class=" text-[#171C26]">${
+  currentPageElement.innerHTML = `<span class="${
+    totalPages === 0 || totalPages === currentPage
+      ? "text-[#826868]"
+      : "text-[#171C26]"
+  }">${
     totalProjects === 0 ? 0 : currentPage
   }</span><span class="text-[#687182]">/${totalPages}</span>`;
   previousPageButton.disabled = currentPage === 1;
@@ -137,8 +142,10 @@ rowsPerPageSelect.addEventListener("change", (event) => {
   currentPage = 1;
   const selectedValue = event.target.value;
   rowsPerPage =
-    selectedValue === "all" ? filteredProjects.length : parseInt(selectedValue, 10);
-    localStorage.setItem("rowsPerPage", JSON.stringify(rowsPerPage));
+    selectedValue === "all"
+      ? filteredProjects.length
+      : parseInt(selectedValue, 10);
+  localStorage.setItem("rowsPerPage", JSON.stringify(rowsPerPage));
   renderProjects(filteredProjects, currentPage, rowsPerPage);
   updatePageInfo(currentPage, rowsPerPage, filteredProjects.length);
 });
