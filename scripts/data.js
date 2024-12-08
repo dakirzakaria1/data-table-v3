@@ -6,9 +6,22 @@ export let projectsArray = JSON.parse(
   {
     id: 1,
     name: "Allosaurus web app",
+    isArchived: false,
+    status: "On Hold",
   },
   {
     id: 2,
     name: "MicroRaptor website",
+    isArchived: false,
+    status: "At Risk",
   },
+];
+
+export let filterTabsArray = [
+  "All",
+  "At Risk",
+  "On Hold",
+  "Potential Risk",
+  "On Track",
+  "Archived",
 ];
