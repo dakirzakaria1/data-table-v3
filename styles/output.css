@@ -629,6 +629,10 @@ video {
   min-height: 100%;
 }
 
+.min-h-dvh {
+  min-height: 100dvh;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -740,6 +744,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .object-cover {
