@@ -26,3 +26,36 @@
 .modal-form-buttons {
   @apply px-5 py-4 bg-white flex items-center justify-end gap-5;
 }
+.filter-tabs-nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.filter-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+.filter-tab {
+  @apply flex items-center gap-1 text-gray-700 font-medium text-sm transition duration-300 hover:text-indigo-500;
+}
+.filter-tab.active {
+  @apply font-bold text-indigo-500 relative;
+}
+.filter-tab.active::after {
+  content: "";
+  @apply absolute -bottom-2 left-0 w-full h-[2.5px] bg-indigo-500 rounded-lg;
+}
+.filter-tab span {
+  @apply bg-[#E9EDF5] px-1.5 rounded-xl text-[10px];
+}
+.filter-tab.active span {
+  @apply font-medium;
+}
+.data-table-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.data-table-container::-webkit-scrollbar {
+  display: none;
+}
+.data-table-body .project-row:has(input[type="checkbox"]:checked) {
+  @apply bg-[#EDEDFC];
+}

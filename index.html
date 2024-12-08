@@ -76,7 +76,21 @@
             New project
           </button>
         </div>
+        <nav class="filter-tabs-nav overflow-x-auto pb-2">
+          <ul
+            id="filter-tabs-list"
+            class="flex items-center gap-6 whitespace-nowrap"
+          ></ul>
+        </nav>
       </header>
+      <main>
+        <div class="data-table-container min-w-full rounded-md overflow-x-scroll max-h-[calc(100vh-286px)] min-[537px]:max-h-[calc(100vh-270px)]">
+          <table class="table-auto w-full overflow-x-auto border-collapse relative">
+            <caption class="sr-only">Projects Table</caption>
+            <tbody id="projects-wrapper"></tbody>
+          </table>
+        </div>
+      </main>
     </div>
   </body>
 </html>
