@@ -592,6 +592,18 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -625,10 +637,6 @@ video {
   max-height: calc(100vh - 286px);
 }
 
-.min-h-full {
-  min-height: 100%;
-}
-
 .min-h-dvh {
   min-height: 100dvh;
 }
@@ -641,8 +649,52 @@ video {
   width: 100%;
 }
 
+.min-w-\[298px\] {
+  min-width: 298px;
+}
+
 .min-w-full {
   min-width: 100%;
+}
+
+.min-w-\[46px\] {
+  min-width: 46px;
+}
+
+.min-w-\[48px\] {
+  min-width: 48px;
+}
+
+.min-w-\[44px\] {
+  min-width: 44px;
+}
+
+.min-w-\[px\] {
+  min-width: px;
+}
+
+.min-w-\[150px\] {
+  min-width: 150px;
+}
+
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+
+.min-w-\[100px\] {
+  min-width: 100px;
+}
+
+.min-w-\[260px\] {
+  min-width: 260px;
+}
+
+.min-w-\[140px\] {
+  min-width: 140px;
+}
+
+.min-w-\[54px\] {
+  min-width: 54px;
 }
 
 .table-auto {
@@ -721,6 +773,21 @@ video {
   border-radius: 0.75rem;
 }
 
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.border-\[\#E9EDF5\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(233 237 245 / var(--tw-border-opacity));
+}
+
+.bg-\[\#F7F9FC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 249 252 / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -744,11 +811,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -793,6 +855,10 @@ video {
   padding-top: 0.75rem;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -804,6 +870,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -829,8 +900,18 @@ video {
   font-weight: 500;
 }
 
-.font-semibold {
-  font-weight: 600;
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-\[\#171C26\] {
+  --tw-text-opacity: 1;
+  color: rgb(23 28 38 / var(--tw-text-opacity));
+}
+
+.text-\[\#687182\] {
+  --tw-text-opacity: 1;
+  color: rgb(104 113 130 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {
@@ -851,30 +932,6 @@ video {
 .text-indigo-500 {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
-}
-
-.text-\[\#171C26\] {
-  --tw-text-opacity: 1;
-  color: rgb(23 28 38 / var(--tw-text-opacity));
-}
-
-.text-\[\#687182\] {
-  --tw-text-opacity: 1;
-  color: rgb(104 113 130 / var(--tw-text-opacity));
-}
-
-.text-\[\#ea2424e9\] {
-  color: #ea2424e9;
-}
-
-.text-\[\#43ff19\] {
-  --tw-text-opacity: 1;
-  color: rgb(67 255 25 / var(--tw-text-opacity));
-}
-
-.text-\[\#826868\] {
-  --tw-text-opacity: 1;
-  color: rgb(130 104 104 / var(--tw-text-opacity));
 }
 
 .opacity-10 {
@@ -1168,14 +1225,35 @@ video {
   display: none;
 }
 
-.odd\:border-y:nth-child(odd) {
-  border-top-width: 1px;
-  border-bottom-width: 1px;
+.data-table th:not(:first-child) {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.odd\:border-\[\#E9EDF5\]:nth-child(odd) {
-  --tw-border-opacity: 1;
-  border-color: rgb(233 237 245 / var(--tw-border-opacity));
+.data-table-header .sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.data-table-header .sort-button[data-active="true"] {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.data-table-header .sort-button[data-active="true"][data-order="desc"] i {
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:text-gray-900:hover {
@@ -1194,10 +1272,6 @@ video {
 @media (min-width: 537px) {
   .min-\[537px\]\:max-h-\[calc\(100vh-270px\)\] {
     max-height: calc(100vh - 270px);
-  }
-
-  .min-\[537px\]\:min-h-full {
-    min-height: 100%;
   }
 
   .min-\[537px\]\:min-h-fit {
@@ -1222,4 +1296,3 @@ video {
     padding: 1rem;
   }
 }
-

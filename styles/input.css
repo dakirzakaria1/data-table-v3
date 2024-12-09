@@ -41,7 +41,7 @@
 }
 .filter-tab.active::after {
   content: "";
-  @apply absolute -bottom-2 left-0 w-full h-[2.5px] bg-indigo-500 rounded-lg;
+  @apply absolute -bottom-2 left-0 w-full h-[2.5px] bg-indigo-500 rounded-lg ;
 }
 .filter-tab span {
   @apply bg-[#E9EDF5] px-1.5 rounded-xl text-[10px];
@@ -56,4 +56,15 @@
 .data-table-container::-webkit-scrollbar {
   display: none;
 }
-
+.data-table th:not(:first-child) {
+  @apply uppercase font-medium text-xs text-gray-500;
+}
+.data-table-header .sort-button {
+  @apply inline-flex items-center gap-1 uppercase font-medium text-xs text-gray-500;
+}
+.data-table-header .sort-button[data-active="true"] {
+  @apply text-gray-900;
+}
+.data-table-header .sort-button[data-active="true"][data-order="desc"] i {
+  @apply rotate-180;
+}

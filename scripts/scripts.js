@@ -14,6 +14,7 @@ const rowsPerPageSelect = document.getElementById("rows-per-page-select");
 const previousPageButton = document.getElementById("previous-page");
 const nextPageButton = document.getElementById("next-page");
 const currentPageElement = document.getElementById("current-page");
+const sortButtons = document.querySelectorAll(".sort-button");
 
 /* State Variables */
 let currentSearchTerm = "";
@@ -61,6 +62,12 @@ const renderFilterTabs = () => {
       document.querySelectorAll(".filter-tab").forEach((tab) => {
         tab.classList.remove("active");
       });
+      sortButtons.forEach((btn) => {
+        btn.dataset.clickCount = "0";
+        btn.dataset.active = "false";
+        btn.dataset.order = "none";
+        btn.setAttribute("aria-sort", "none");
+      });
       filterTab.classList.add("active");
       selectedFilter = status;
       currentPage = 1;
@@ -96,8 +103,8 @@ const renderProjects = (
       const projectRow = document.createElement("tr");
       projectRow.classList.add(
         "project-row",
-        "odd:border-y",
-        "odd:border-[#E9EDF5]",
+        "border-y",
+        "border-[#E9EDF5]",
         "px-2.5",
         "py-3"
       );
@@ -117,8 +124,9 @@ const updatePageInfo = (currentPage, rowsPerPage, totalProjects) => {
   pageInfoElement.textContent = `${startProject}-${endProject} of ${totalProjects}`;
   const totalPages = Math.ceil(totalProjects / rowsPerPage);
   currentPageElement.innerHTML = `<span class="${
-    totalPages === 0 || totalPages === currentPage
-      ? "text-[#826868]"
+    totalPages === 0 ||
+    (totalPages === currentPage && currentPage !== totalPages)
+      ? "text-[#687182]"
       : "text-[#171C26]"
   }">${
     totalProjects === 0 ? 0 : currentPage
@@ -127,6 +135,8 @@ const updatePageInfo = (currentPage, rowsPerPage, totalProjects) => {
   nextPageButton.disabled = currentPage === totalPages || totalProjects === 0;
 };
 updatePageInfo(currentPage, rowsPerPage, filteredProjects.length);
+
+
 
 /* Event listeners */
 projectSearchInput.addEventListener("input", () => {

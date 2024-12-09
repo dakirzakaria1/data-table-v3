@@ -84,9 +84,118 @@
           ></ul>
         </nav>        
       </header>
-      <main class="">
+      <main>
         <div class="data-table-container min-w-full rounded-md overflow-x-scroll max-h-[calc(100vh-286px)] min-[537px]:max-h-[calc(100vh-270px)]">
           <table class="table-auto w-full overflow-x-auto border-collapse relative">
+            <thead class="data-table-header bg-[#F7F9FC] sticky top-0 w-full z-20" id="table-header">
+              <tr>
+                <th scope="col" class="px-2.5 py-3 min-w-[48px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="id"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by id"
+                    aria-sort="none"
+                  >
+                    #<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 text-left min-w-[298px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="name"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by name"
+                    aria-sort="none"
+                  >
+                    Name<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[44px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="manger"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by manger"
+                    aria-sort="none"
+                  >
+                    Pm<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[150px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="status"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by status"
+                    aria-sort="none"
+                  >
+                    Status<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[200px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="lastUpdated"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by last update"
+                    aria-sort="none"
+                  >
+                    Last update<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[100px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="resources"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by resources"
+                    aria-sort="none"
+                  >
+                  Resources<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[260px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="timeline"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by timeline"
+                    aria-sort="none"
+                  >
+                  Time line<i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[140px]">
+                  <button
+                    type="button"
+                    class="sort-button"
+                    data-sort-key="estimation"
+                    data-active="false"
+                    data-order="none"
+                    aria-label="Sort by estimation"
+                    aria-sort="none"
+                  >
+                  Estimation <i class="ph ph-arrow-circle-up text-lg"></i>
+                  </button>
+                </th>
+                <th scope="col" class="px-2.5 py-3 min-w-[54px]"></th>
+              </tr>
+            </thead>
             <tbody id="projects-wrapper"></tbody>
           </table>
         </div>
