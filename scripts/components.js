@@ -44,6 +44,13 @@ const createModalFormButtons = (formType) => {
   return container;
 };
 
+export const createProjectIdCell = (projectId) => {
+  const cell = document.createElement("td");
+  cell.classList.add("px-2.5", "py-3");
+  cell.textContent = projectId;
+  return cell;
+};
+
 export const createProjectNameCell = (projectName) => {
   const cell = document.createElement("td");
   cell.classList.add("px-2.5", "py-3");
@@ -56,4 +63,70 @@ export const createProjectNameCell = (projectName) => {
   </a>
   `;
   return cell;
+};
+
+export const createProjectManagerCell = (projectManager) => {
+  const cell = document.createElement("td");
+  cell.classList.add(
+    "py-3",
+    "px-2.5",
+    "flex",
+    "items-center",
+    "justify-center"
+  );
+  const projectManagerName = projectManager.replace(/\s+/g, "-").toLowerCase();
+  const img = new Image();
+  img.src = `./images/${projectManagerName}.png`;
+  img.alt = projectManager;
+  img.classList.add("w-6", "h-6", "rounded-md");
+  img.onerror = () => {
+    const initials = projectManager
+      .split(" ")
+      .map((name) => name[0].toUpperCase())
+      .join("");
+    cell.innerHTML = `<span class="w-6 h-6 rounded-md flex items-center justify-center bg-[#EDEDFC] text-indigo-500 font-semibold text-[10px] border border-[#D2D5DC80]">${initials}</span>`;
+  };
+  cell.appendChild(img);
+  return cell;
+};
+
+export const createProjectLastUpdatedCell = (lastUpdated) => {
+  const cell = document.createElement("td");
+  cell.classList.add(
+    "py-3",
+    "px-2.5",
+    "flex",
+    "items-center",
+    "justify-center",
+    "gap-1.5"
+  );
+  cell.innerHTML = `
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.75 12C1.75 13.2426 2.75736 14.25 4 14.25H10.2485C10.5513 14.25 10.8438 14.1401 11.0717 13.9407L13.8231 11.5332C14.0944 11.2958 14.25 10.9529 14.25 10.5925V4C14.25 2.75736 13.2426 1.75 12 1.75H4C2.75736 1.75 1.75 2.75736 1.75 4V12Z" stroke="#5E5ADB" stroke-width="1.5"/>
+    <path d="M5.25 6.5H10.75" stroke="#5E5ADB" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M5.25 9.5H8.75" stroke="#5E5ADB" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+  <span class="text-sm text-gray-900 text-nowrap">${lastUpdated}</span>
+  `;
+  return cell;
+};
+
+export const createProjectResourcesCell = (projectResources) => {
+  const cell = document.createElement("td");
+  cell.classList.add("py-3", "px-2.5", "text-center");
+  cell.innerHTML = `<span class="text-sm text-gray-900 text-center rounded-md bg-[#E9EDF5] px-[7px] py-1">${projectResources.length}</span>`;
+  return cell;
+};
+
+export const createProjectTimeLineCell = (projectTimeLine) => {
+  const cell = document.createElement("td");
+  cell.classList.add("py-3", "px-2.5");
+  cell.innerHTML = `
+  <div class="w-full flex items-center justify-center gap-1.5">
+  <span class="grow text-xs text-gray-900 text-center rounded-md bg-[#E9EDF5] px-2 py-1">${projectTimeLine.start}</span>
+  <i class="ph-bold ph-caret-right text-gray-400 text-xs"></i>
+  <span class="grow text-xs text-gray-900 text-center rounded-md bg-[#E9EDF5] px-2 py-1">${projectTimeLine.end}</span>
+  </div>
+  `;
+  return cell
 };

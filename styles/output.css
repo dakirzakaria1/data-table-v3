@@ -633,6 +633,10 @@ video {
   height: 100%;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .max-h-\[calc\(100vh-286px\)\] {
   max-height: calc(100vh - 286px);
 }
@@ -647,6 +651,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .min-w-\[298px\] {
@@ -697,6 +705,10 @@ video {
   min-width: 54px;
 }
 
+.grow {
+  flex-grow: 1;
+}
+
 .table-auto {
   table-layout: auto;
 }
@@ -745,6 +757,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-1\.5 {
+  gap: 0.375rem;
+}
+
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -755,6 +771,10 @@ video {
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
 }
 
 .rounded-full {
@@ -773,6 +793,10 @@ video {
   border-radius: 0.75rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-y {
   border-top-width: 1px;
   border-bottom-width: 1px;
@@ -781,6 +805,10 @@ video {
 .border-\[\#E9EDF5\] {
   --tw-border-opacity: 1;
   border-color: rgb(233 237 245 / var(--tw-border-opacity));
+}
+
+.border-\[\#D2D5DC80\] {
+  border-color: #D2D5DC80;
 }
 
 .bg-\[\#F7F9FC\] {
@@ -811,6 +839,16 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E9EDF5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 237 245 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#EDEDFC\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 237 252 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -845,6 +883,21 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-\[7px\] {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-2 {
@@ -892,12 +945,20 @@ video {
   line-height: 1rem;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .font-bold {
   font-weight: 700;
 }
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -1294,5 +1355,9 @@ video {
 
   .min-\[537px\]\:p-4 {
     padding: 1rem;
+  }
+
+  .min-\[537px\]\:text-center {
+    text-align: center;
   }
 }
